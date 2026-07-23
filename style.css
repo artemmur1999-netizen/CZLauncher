@@ -1,0 +1,91 @@
+/* 1. Сброс отступов и настройка размеров */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* 2. Растягиваем страницу на 100% высоты экрана */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 3. Шапка */
+header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    height: 90%;
+    width: auto;
+}
+
+/* 4. Центр страницы (забирает всё пустое место) */
+center {
+    flex: 1; /* Именно это прижимает footer к самому низу! */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 5. Кнопки */
+.downloads {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 40%;
+    margin-top: 15px;
+}
+
+a{
+    margin: 10px;
+    height: 100%;
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: white;
+    background: rgb(113, 0, 237);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.5);
+}
+
+button:active {
+    filter: brightness(2);
+    transition: none;
+}
+
+/* 6. Подвал (Футер) */
+footer {
+    width: 100%;
+    padding: 15px 0;
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
